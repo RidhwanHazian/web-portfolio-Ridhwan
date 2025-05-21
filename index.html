@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Welcome to my website</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#TechStack">Tech Stack</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Welcome to my website</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Compentencies" onclick="toggleMenu()">Competencies</a></li>
+                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id= "profile">
+        <div class ="section__pic-container">
+            <img src="./assets/wan4.png" alt="Ridhwan profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1"></p>
+            <h1 class="title">Hi, I'm Muhammad Ridhwan bin Hazian</h1>
+            <p class="section__text__p2">Tech Enthusiast</p>
+            <div class="btn-container">
+
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume1.pdf')"
+                >My Resume</button>
+
+            </div>
+            <div id="social-container">
+                <img src="./assets/linkedin.png" alt="My linkedin profile"
+                class="icon"onclick="location.href='https://www.linkedin.com/in/ridhwan-hazian-60035a293/'">
+
+                <img src="./assets/github.png" alt="My Github Profile"
+                class="icon"onclick="location.href='https://github.com/RidhwanHazian'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/wanpicture2.jpg"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container2">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <h3>Languages</h3>
+                <p>HTML, CSS, JavaScript, C++, JAVA, SQL, VB.NET, C, Prolog, Scheme, .<br /></p>
+                    </div>
+                    <div class="details-container2">
+                        <img
+                  src="./assets/education.png"
+                  alt="education icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>Diploma Computer Science, Sijil Pelajaran Malaysia(SPM)<br /></p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>I'm a passionate and driven Computer Science student currently in Semester 4 at Universiti Teknologi MARA (UiTM) Kampus Jasin, actively seeking an internship opportunity to grow my technical and professional capabilities.
+                        With a solid foundation in programming, algorithms, data structures, and software development, I aim to apply my knowledge in real-world projects while gaining hands-on industry experience. My interests span across coding, digital design, and collaborative project development, where I enjoy turning ideas into functional and meaningful applications.
+                        I'm continuously expanding my skill set through academic projects and personal learning, and I'm excited to contribute to innovative teams that value creativity, efficiency, and problem-solving.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1 class="title">Tools I Use</h1>
+<div class="tools-container">
+    <img src="assets/vscode.png" alt="VS Code" class="icon tool-icon vscode">
+    <img src="assets/github.png" alt="GitHub" class="icon tool-icon github">
+    <img src="assets/Prolog.png" alt="Prolog" class="icon tool-icon prolog">
+    <img src="assets/sql.png" alt="Sql" class="icon tool-icon sql">
+    <img src="assets/Ciscologo.png" alt="Cisco" class="icon tool-icon cisco">
+    <img src="assets/C++_logo.png" alt="C++" class="icon tool-icon c++">
+    <img src="assets/bluej_logo.png" alt="BlueJ" class="icon tool-icon bluej">
+    <img src="assets/xampp.png" alt="Xampp" class="icon tool-icon xampp">
+    <img src="assets/racket.png" alt="Racket" class="icon tool-icon racket">
+    <img src="assets/logoSql.png" alt="MySql" class="icon tool-icon mysql">
+    <img src="assets/wordlogo.png" alt="Word" class="icon tool-icon word">
+    <img src="assets/Accesslogo.png" alt="Access" class="icon tool-icon access">
+    <img src="assets/Excellogo.png" alt="Excel" class="icon tool-icon Excel">
+    <img src="assets/Projectlogo.png" alt="Racket" class="icon tool-icon racket">
+    <img src="assets/Visiologo.png" alt="Visio" class="icon tool-icon visio">
+</div>
+
+
+        <img src="" alt="" class="icon arrow"
+        onclick="location.href='./#Compentencies'">
+    </section>
+    <section id="TechStack">
+        <p class="section__text__p1">Explore My </p>
+            <h1 class="title">Tech stack</h1>
+            <div class="Compentencies-details-container">
+                <div class="competencies-containers">
+                    <div class="details-container">
+                        <h2 class="Compentencies-sub-title"></h2>
+                        <div class="ariticle-container">
+                            <article>
+                                <div>
+                                    <h3>Introduction to Algorithm Design and Development</h3>
+                                    <p>Completed coursework in algorithm design, emphasizing problem-solving strategies and algorithmic thinking.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Fundamentals of Algorithms and Computer Problem Solving</h3>
+                                    <p>Acquired skills in solving computational problems using structured algorithm design and step-by-step logical thinking.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Interactive Multimedia</h3>
+                                    <p>Studied interactive multimedia concepts including multimedia system design, user interaction, and development tools.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Fundamentals of Operating Systems</h3>
+                                    <p>Gained foundational knowledge in operating system design, including process management, memory management, and file systems.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Fundamentals of Data Structures</h3>
+                                    <p>Learned essential data structures such as arrays, linked lists, stacks, queues, and trees with practical coding applications.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Introduction to Web and Mobile Application</h3>
+                                    <p>Explored web and mobile development, covering front-end technologies (HTML, CSS, JavaScript) and basic back-end integration.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Introduction to Data Communication and Networking</h3>
+                                    <p>Studied the principles of data transmission, network protocols, OSI and TCP/IP models, and basic network troubleshooting.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Fundamentals of Entrepreneurship </h3>
+                                    <p>Developed understanding of entrepreneurship including business model creation, marketing strategies, and financial planning.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <h2 class="Compentencies-sub-title"></h2>
+                        <div class="ariticle-container">
+                            <article>
+                                <div>
+                                    <h3>Computer Organization</h3>
+                                    <p>Examined the internal structure and functioning of digital computers, including instruction cycles, memory hierarchy, and CPU architecture.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Object-Oriented Programming</h3>
+                                    <p>Mastered object-oriented programming concepts such as encapsulation, inheritance, and polymorphism through practical Java development.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Programming Paradigms</h3>
+                                    <p>Explored various programming paradigms including procedural, object-oriented, and declarative programming styles.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Visual Programming</h3>
+                                    <p>Studied GUI-based application development using visual programming tools and event-driven programming techniques.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Introduction to Database Management</h3>
+                                    <p>Learned fundamental concepts of databases, SQL queries, relational models, and basic database application development.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>Information System Development</h3>
+                                    <p>Studied the systems development life cycle (SDLC), requirement analysis, design methodologies, and documentation techniques.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <div>
+                                    <h3>English for Communicative Competence I–III</h3>
+                                    <p>Improved professional communication skills including report writing, oral presentation, and workplace communication.</p>
+                                </div>
+                            </article>
+                             <article>
+                                <div>
+                                    <h3>Mathematics for Computing</h3>
+                                    <p>Developed strong mathematical foundations through courses in pre-calculus, calculus, discrete mathematics, and statistics.  
+                                        Topics included functions, derivatives, logic, set theory, combinatorics, graph theory, and basic probability and statistical analysis.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="" alt="" class="icon unique-arrow"
+        onclick="location.href='./#project'">
+    </section>
+    <section id="project">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+    <h1 class="project"></h1>
+    <div class="Compentencies-details-container">
+        <div class="about-containers">
+        <div class="details-container color-container">
+            <div class="ariticle-container">
+                <img src="./assets/pokemon-ezgif.com-speed.gif" alt="" class="project-img">
+
+            </div>
+            <h2 class="Compentencies-sub-title project-title">PocketPals</h2>
+            <p class="project-description">PocketPals is a dynamic mini Pokémon website created using HTML, CSS, and JavaScript. 
+                This project showcases my adeptness in front-end development, where I utilized HTML for structure, CSS for styling, and JavaScript for interactivity. 
+                I embarked on this project out of a genuine passion for exploring new technologies and a deep-seated love for coding.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"onclick="location.href='https://github.com/Dat1n/web-portfolio-haris'">
+                    Github
+                    
+                </button>
+                <button class="btn btn-color-2 project-btn"onclick="location.href='https://main--haris-mini-pokemon-website.netlify.app/'">
+                    Live Demo
+                    
+                </button>
+            </div>
+        </div>
+        <div class="details-container color-container">
+            <div class="ariticle-container">
+                <img src="./assets/ConnectIT.gif" alt="" class="project-img2">
+            </div>
+            <h2 class="Compentencies-sub-title project-title">ConnectIT</h2>
+            <p class="project-description">ConnectIT, a Flutter app for iOS and Android, uses Firebase for secure authentication and real-time database management, ensuring instant data sync. 
+                With dynamic JavaScript features, it offers a sleek UI, social features (posts, likes, comments), and screen size optimization, making it a standout in social media.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"onclick="location.href='https://github.com/Dat1n/Dat1n.github.io'">
+                    Github
+                    
+                </button>
+                <button class="btn btn-color-2 project-btn"onclick="location.href='https://dat1n.github.io/'">
+                    Live Demo
+
+                </button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="ariticle-container">
+                <img src="./assets/meowsuki.png" alt="" class="project-img3">
+
+            </div>
+            <h2 class="Compentencies-sub-title project-title">meow-suki</h2>
+            <p class="project-description">Meow-Suki is a cat café and hotel website designed to showcase the restaurant’s 
+                menu and key information in an engaging and user-friendly way. This project highlights my skills in front-end and back-end development, 
+                focusing on a clean design, responsive UI, and smooth navigation. The website will provide visitors with details about the café, its offerings, and an 
+                immersive experience that reflects the brand’s unique identity. My goal is to create an aesthetic and functional online presence that enhances customer engagement.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"onclick="location.href='https://github.com/Dat1n/CatCafe-CatHotel'">
+                    Github
+                    
+                </button>
+                <button class="btn btn-color-2 project-btn"onclick="location.href='https://dat1n.github.io/CatCafe-CatHotel/'">
+                    Live Demo
+                    
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <img src="" alt="" class=""
+        onclick="location.href='./#contact'">
+    </section>
+
+    <section id="contact">
+        <p class="section__text__p1">Get In Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <img src="./assets/email.png" alt="Email" class="icon contact-icon">
+            <p><a href="mridhwan950@gmail.com">mridhwan950@gmail.com</a></p>
+            
+        </div>
+    </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#TechStack">TechStack</a></li>
+                        <li><a href="#project">Project</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2025 Ridhwan. All Rights Reserved</p>
+        </footer>
+        <script src="scrip.js"></script> 
+    </body>
+    </html>
+    
