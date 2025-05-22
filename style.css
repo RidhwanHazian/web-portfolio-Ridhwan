@@ -341,6 +341,7 @@ section{
     pointer-events: none; /* Makes the image non-clickable */
     transition: transform 0.3s ease-in-out;
 }
+
 .tools-container img {
     pointer-events: auto; /* Re-enable hover effects */
 }
