@@ -329,26 +329,41 @@ section{
 }
 
 .tools-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem; /* Adjust spacing between icons */
-    margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: hidden;
+  flex-direction: row; /* horizontal layout by default */
+}
+
+@media (max-width: 600px) {
+  .tools-container {
+    flex-direction: row;  /* keep horizontal direction on mobile */
+    flex-wrap: wrap;      /* allow wrapping to new lines */
+    justify-content: center; /* center horizontally */
+    align-items: center;  /* vertically center icons in a row */
+  }
+
+  .tool-icon {
+    width: 40px !important;  /* smaller icons on mobile */
+    height: auto !important; /* keep aspect ratio */
+  }
 }
 
 .tool-icon {
-    width: 50px; /* Adjust size */
-    height: auto;
-    pointer-events: none; /* Makes the image non-clickable */
-    transition: transform 0.3s ease-in-out;
-}
-
-.tools-container img {
-    pointer-events: auto; /* Re-enable hover effects */
+  width: 50px;  /* default icon size */
+  height: auto; /* keep aspect ratio */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .tool-icon:hover {
-    transform: scale(1.2); /* Slightly enlarge on hover */
+  transform: scale(1.2);
+  z-index: 10; /* keep hover scale above others */
 }
+
 
   
 /* Head Text and header colors */
