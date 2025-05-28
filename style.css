@@ -375,6 +375,44 @@ section{
   flex-direction: row; /* horizontal layout by default */
 }
 
+.text-container {
+  background-color: rgb(0, 0, 0); /* semi-transparent white */
+  padding: 20px;
+  border: 2px solid rgb(0, 0, 0); /* white border */
+  border-radius: 10px; /* rounded corners */
+  color: rgb(255, 255, 255); /* text color */
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* optional shadow */
+}
+.textaboutme{
+    color:White;
+}
+
+.techstack-wrapper {
+  position: relative;
+}
+
+.star-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+#star-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#TechStack {
+  position: relative;
+  z-index: 1;
+}
+
+
 @media (max-width: 600px) {
   .tools-container {
     flex-direction: row;  /* keep horizontal direction on mobile */
@@ -502,6 +540,8 @@ article.icon{
     justify-content: center;
     flex-direction: column;
     height: 70vh;
+    position: relative;
+    overflow: hidden;
 }
   
 .contact-info-upper-container {
@@ -529,6 +569,24 @@ article.icon{
 
 .contact-icon{
     cursor: default;
+}
+
+#canvas2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none; /* allow clicks to pass through */
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1; /* ensures text stays above canvas */
+  padding: 3rem 2rem; /* optional: adjust spacing */
+  text-align: center;
+  color: white; /* make sure text contrasts background */
 }
 
 /* Footer styling */
