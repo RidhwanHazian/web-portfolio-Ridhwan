@@ -151,24 +151,55 @@ section{
 
 /*Profile section*/
 
-#profile {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 80vh;
-  }
+#profile 
+{
+    font-family: "Poppins", sans-serif;
+    background-image: url('./assets/forest.jpg'); /* Adjust path if needed */
+    background-size: cover;        /* Ensures image covers the whole screen */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    background-position: center;   /* Centers the image */
+    min-height: 100vh;             /* Makes sure body covers full viewport height */
+    margin: 0;     
+}
   
-.section__pic-container {
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+}
+
+.section__pic-container{
     display: flex;
-    height: 400px;
-    width: 335px;
+    height: 335px;   /* same as width */
+    width: 335px;    /* same as height */
     margin: auto 0;
+}
+
+.section__pic-container2{
+    display: flex;
+    height: 335px;   /* same as width */
+    width: 335px;    /* same as height */
+    margin: auto 0;
+}
+
+.section__pic-container2 img{
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;  /* makes it circular */
+    border: 4px solid white;  /* optional border */
+    margin-left: -20%;
 }
   
 .section__text {
     align-self: center;
     text-align: center;
-    color : White;
+    color : rgb(255, 255, 255);
 }
   
 .section__text p {
@@ -190,6 +221,12 @@ section{
     font-size: 3rem;
     text-align: center;
     color : White;
+}
+
+.title2 {
+    font-size: 3rem;
+    text-align: center;
+    color : rgb(0, 0, 0);
 }
   
 #socials-container {
