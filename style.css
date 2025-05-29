@@ -60,7 +60,6 @@ nav{
 a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    text-decoration: 163,163,163;
     -webkit-user-select: auto; /* Allow default user behavior */
     -webkit-touch-callout: default; /* Show the default callout menu (with open link options) */
     user-select: auto; /* Ensure links can be interacted with */
@@ -241,9 +240,13 @@ section{
 }
 
 .title2 {
-    font-size: 3rem;
-    text-align: center;
-    color : rgb(0, 0, 0);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+  color:black;
 }
   
 #social-container {
@@ -251,7 +254,7 @@ section{
   justify-content: center;
   gap: 15px;
   padding: 15px;
-  background-color: #333;
+  background-color:transparent;
   flex-wrap: wrap;
 }
 
@@ -717,6 +720,11 @@ footer {
   .logo{
     color:white;
     align-content:center;
+  }
+  
+  .section__text__p2 {
+    color: white;
+
   }
 
   #hamburger-nav {
