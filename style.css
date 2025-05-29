@@ -39,10 +39,22 @@ nav{
     height: 17vh;
 }
 
+.nav-links a {
+  color: rgb(0, 0, 0); /* or your preferred color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* color on hover */
+}
+
+
 .nav-links{
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    color:black;
 }
 
 a {
@@ -56,7 +68,8 @@ a {
 
 .logo{
     font-size: 2rem;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 /*HamburgerMenu*/
@@ -162,7 +175,8 @@ section{
     background-repeat: no-repeat;  /* Prevents tiling */
     background-position: center;   /* Centers the image */
     min-height: 100vh;             /* Makes sure body covers full viewport height */
-    margin: 0;     
+    margin: 0;
+    padding-top: 17vh;     
 }
   
 .profile-container {
@@ -429,12 +443,11 @@ section{
 
 /* Transparent, blurred navbar */
 #desktop-nav {
-  background-color: rgb(77, 67, 67);
   height: 17vh;
-}
-
-.nav-links a {
-    color: rgb(255, 255, 255);
+  width: 100%;
+  background-color: transparent; /* semi-transparent */
+  position: fixed; /* navbar scrolls with page */
+  z-index: 999;
 }
 
 /* google background color */
@@ -689,6 +702,12 @@ footer {
   /* Nav */
   #desktop-nav {
     display: none;
+    position:relative;
+  }
+  
+  .logo{
+    color:white;
+    align-content:center;
   }
 
   #hamburger-nav {
