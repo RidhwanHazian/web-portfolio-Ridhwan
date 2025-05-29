@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 html{
@@ -413,21 +415,6 @@ section{
   z-index: 1;
 }
 
-
-@media (max-width: 600px) {
-  .tools-container {
-    flex-direction: row;  /* keep horizontal direction on mobile */
-    flex-wrap: wrap;      /* allow wrapping to new lines */
-    justify-content: center; /* center horizontally */
-    align-items: center;  /* vertically center icons in a row */
-  }
-
-  .tool-icon {
-    width: 40px !important;  /* smaller icons on mobile */
-    height: auto !important; /* keep aspect ratio */
-  }
-}
-
 .tool-icon {
   width: 50px;  /* default icon size */
   height: auto; /* keep aspect ratio */
@@ -608,14 +595,16 @@ footer {
 }
 
 /* Specific styles for 1440p displays */
-@media (min-width: 2560px) and (max-width: 2560px) {
+@media (min-width: 2560px)
+{
     /* Adjustments for 1440p resolution */
     body {
         font-size: 30px; /* Example adjustment */
     }
 
     .section {
-        margin: 0 50%; /* Example adjustment for sections */
+    margin: 0 auto;
+    max-width: 1200px;
     }
 
     .nav-links {
@@ -695,25 +684,128 @@ footer {
     }
 }
   
-@media (max-width: 768px) {
-    section {
-        margin: 0 2rem;
-        height: fit-content;
-    }
-    .section-container {
-        flex-direction: column;
-        height: fit-content;
-    }
-    .project-img2 {
-        width: 60%;
-    }
-    .competencies-containers {
-        gap: 3rem;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-        display: flex;
-        position: relative;
-    }
+/* Example media query for mobile (screen width ≤ 768px) */
+@media screen and (max-width: 768px) {
+  /* Nav */
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  /* General layout */
+  section {
+    margin: 0 1rem;
+    padding: 2rem 0;
+  }
+
+  .section-container,
+  .profile-container,
+  .about-containers,
+  .about-details-container,
+  .competencies-containers,
+  .tools-container,
+  .btn-container,
+  .article-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .section__pic-container,
+  .section__pic-container2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section__pic-container2 img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .project-img {
+    height: auto;
+  }
+
+  .details-container,
+  .details-container2 {
+    width: 100%;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+
+  .project-description {
+    text-align: justify;
+    padding: 0 1rem;
+  }
+
+  .unique-arrow,
+  .icon.unique-arrow-2 {
+    display: none;
+  }
+
+  #contact {
+    height: auto;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+  }
+
+  .tool-icon {
+    width: 40px !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tools-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+    .contact-info-upper-container {
+    display: flex;
+    flex-direction: row;        /* Align items in a row */
+    align-items: center;        /* Center vertically */
+    justify-content: center;    /* Center horizontally */
+    gap: 1rem;                  /* Space between icon and text */
+    padding: 1rem;
+    text-align: center;
+    flex-wrap: wrap;            /* Allow wrapping if needed */
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: auto;
+  }
+
+  .contact-info-upper-container p {
+    margin: 0;
+  }
 }
   
 @media (max-width: 480px) {
@@ -726,5 +818,19 @@ footer {
     .project-img2 {
         width: 80%;
     }
+}
+
+@media (max-width: 600px) {
+  .tools-container {
+    flex-direction: row;  /* keep horizontal direction on mobile */
+    flex-wrap: wrap;      /* allow wrapping to new lines */
+    justify-content: center; /* center horizontally */
+    align-items: center;  /* vertically center icons in a row */
+  }
+
+  .tool-icon {
+    width: 40px !important;  /* smaller icons on mobile */
+    height: auto !important; /* keep aspect ratio */
+  }
 }
 
