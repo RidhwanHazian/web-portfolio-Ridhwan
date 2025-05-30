@@ -730,6 +730,9 @@ footer {
     background-color: rgb(77, 67, 67);
   }
 
+ p.section__text__p2{
+  color:white;
+}
   /* General layout */
   section {
     margin: 0 1rem;
@@ -887,6 +890,16 @@ footer {
   .tool-icon {
     width: 40px !important;  /* smaller icons on mobile */
     height: auto !important; /* keep aspect ratio */
+  }
+}
+
+@media (max-width: 450px) {
+  .title2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    display: inline-block;
   }
 }
 
