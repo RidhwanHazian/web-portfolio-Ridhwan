@@ -907,13 +907,4 @@ footer {
   }
 }
 
-@media (max-width: 450px) {
-  .title2 {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
-    display: inline-block;
-  }
-}
 
