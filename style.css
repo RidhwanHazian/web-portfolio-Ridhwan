@@ -416,16 +416,15 @@ section{
 }
 
 .text-container {
-  background-color: rgb(0, 0, 0); /* semi-transparent white */
+  background-color: rgb(255, 255, 255); /* semi-transparent white */
   padding: 20px;
-  border: 2px solid rgb(0, 0, 0); /* white border */
   border-radius: 10px; /* rounded corners */
-  color: rgb(255, 255, 255); /* text color */
+  color: rgb(0, 0, 0); /* text color */
   margin-top: 20px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* optional shadow */
 }
 .textaboutme{
-    color:White;
+    color:rgb(0, 0, 0);
 }
 
 .techstack-wrapper {
