@@ -665,6 +665,85 @@ footer {
     }
 }
 
+/* Responsive styles for screen widths between 1200px and 1500px */
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  section {
+    margin: 0 5rem;
+    padding: 2rem 0;
+  }
+
+  .nav-links {
+    font-size: 1.3rem;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .title2 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 0.9rem;
+    width: 7.5rem;
+    font-size: 1rem;
+  }
+
+  .profile-container {
+    flex-direction: row;
+    padding: 2rem;
+    gap: 30px;
+    max-width: 90%;
+  }
+
+  .section__pic-container,
+  .section__pic-container2 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .section__pic-container2 img {
+    width: 140%;
+    margin-left: -20%;
+  }
+
+  .details-container,
+  .details-container2 {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .project-img {
+    height: 20rem;
+  }
+
+  .btn-resume {
+    width: auto;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .about-containers,
+  .competencies-containers {
+    gap: 1.5rem;
+  }
+
+  .text-container {
+    padding: 1.5rem;
+  }
+
+  .tool-icon {
+    width: 45px;
+  }
+
+  .contact-info-upper-container {
+    padding: 1rem;
+  }
+}
+
+
 
 /* For desktop screens */
 @media (hover: hover) {
