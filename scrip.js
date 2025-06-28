@@ -186,3 +186,16 @@ window.addEventListener("mouseout", function () {
 
 init();
 animate();
+
+let lastScrollTop = 0;
+const bar = document.querySelector('#desktop-nav');
+
+window.addEventListener('scroll', function() {
+  let st = window.pageYOffset || document.documentElement.scrollTop;
+  if (st > lastScrollTop) {
+    bar.style.top = '-100px';
+  } else {
+    bar.style.top = '0';
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+}, false);
