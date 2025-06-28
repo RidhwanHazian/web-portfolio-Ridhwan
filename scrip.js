@@ -188,14 +188,17 @@ init();
 animate();
 
 let lastScrollTop = 0;
-const bar = document.querySelector('#desktop-nav');
+const desktopBar = document.querySelector('#desktop-nav');
+const hamburgerBar = document.querySelector('#hamburger-nav');
 
 window.addEventListener('scroll', function() {
   let st = window.pageYOffset || document.documentElement.scrollTop;
   if (st > lastScrollTop) {
-    bar.style.top = '-100px';
+    if (desktopBar) desktopBar.style.top = '-100px';
+    if (hamburgerBar) hamburgerBar.style.top = '-100px';
   } else {
-    bar.style.top = '0';
+    if (desktopBar) desktopBar.style.top = '0';
+    if (hamburgerBar) hamburgerBar.style.top = '0';
   }
   lastScrollTop = st <= 0 ? 0 : st;
 }, false);
