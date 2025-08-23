@@ -240,7 +240,8 @@ section{
   
 .section__text__p1 {
     text-align: center;
-    color : black;
+    color: black;
+    font-weight: bold;
 }
   
 .section__text__p2 {
