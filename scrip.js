@@ -244,21 +244,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Scroll Reveal
-function revealOnScroll() {
+document.addEventListener("DOMContentLoaded", () => {
   const reveals = document.querySelectorAll(".reveal");
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 100;
 
-    if (elementTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active"); // add animation
+      } else {
+        entry.target.classList.remove("active"); // remove when out of view
+      }
+    });
+  }, { threshold: 0.2 }); // adjust how much needs to be visible
 
-window.addEventListener("scroll", revealOnScroll);
+  reveals.forEach(r => observer.observe(r));
+});
+
 
 
