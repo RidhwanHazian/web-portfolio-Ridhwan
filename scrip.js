@@ -223,3 +223,42 @@ window.addEventListener('scroll', function() {
   }
   lastScrollTop = st <= 0 ? 0 : st;
 }, false);
+
+// Typewriter Effect for .title2
+document.addEventListener("DOMContentLoaded", () => {
+  const element = document.querySelector(".title2");
+  const text = "Hi, I'm Muhammad Ridhwan bin Hazian";
+  let index = 0;
+
+  element.innerHTML = ""; // clear initial text
+
+  function typeWriter() {
+    if (index < text.length) {
+      element.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 100); // typing speed
+    }
+  }
+
+  typeWriter();
+});
+
+// Scroll Reveal
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (elementTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+
