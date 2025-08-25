@@ -244,21 +244,54 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Scroll Reveal
-document.addEventListener("DOMContentLoaded", () => {
-  const reveals = document.querySelectorAll(".reveal");
+// Reveal on scroll (repeats by default; optional once-per-element)
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active"); // add animation
-      } else {
-        entry.target.classList.remove("active"); // remove when out of view
-      }
+  if (prefersReduced) {
+    els.forEach(el => el.classList.add('active'));
+    return;
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const el = entry.target;
+        const revealOnce = (el.dataset.reveal === 'once'); // <div class="reveal" data-reveal="once">
+
+        if (entry.isIntersecting) {
+          el.classList.add('active');        // animate in
+          if (revealOnce) observer.unobserve(el); // stop watching if once
+        } else if (!revealOnce) {
+          el.classList.remove('active');     // reset so it can animate again on re-enter
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -10% 0px'
     });
-  }, { threshold: 0.2 }); // adjust how much needs to be visible
 
-  reveals.forEach(r => observer.observe(r));
-});
+    els.forEach(el => observer.observe(el));
+  } else {
+    // Fallback for very old browsers
+    const onScroll = () => {
+      els.forEach(el => {
+        const r = el.getBoundingClientRect();
+        const revealOnce = (el.dataset.reveal === 'once');
+        const inView = r.top < window.innerHeight * 0.9 && r.bottom > 0;
+
+        if (inView) el.classList.add('active');
+        else if (!revealOnce) el.classList.remove('active');
+      });
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+})();
+
+
 
 
 
