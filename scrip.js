@@ -83,16 +83,37 @@ window.addEventListener("resize", resizeCanvasToSection);
 
 let particleArray;
 
+// Mouse + Touch support
 let mouse = {
   x: null,
   y: null,
   radius: (canvas.height / 80) * (canvas.width / 80),
 };
 
+// Desktop mouse
 window.addEventListener("mousemove", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
 });
+
+// Reset on mouse out
+window.addEventListener("mouseout", function () {
+  mouse.x = undefined;
+  mouse.y = undefined;
+});
+
+// Mobile touch
+window.addEventListener("touchmove", function (event) {
+  const touch = event.touches[0];
+  mouse.x = touch.clientX;
+  mouse.y = touch.clientY;
+}, { passive: true });
+
+window.addEventListener("touchend", function () {
+  mouse.x = undefined;
+  mouse.y = undefined;
+});
+
 
 class Particle {
   constructor(x, y, directionX, directionY, size, color) {
